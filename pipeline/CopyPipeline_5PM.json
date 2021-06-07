@@ -1,0 +1,179 @@
+{
+	"name": "CopyPipeline_5PM",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_498",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "lakesynapse2/synapse/workspaces/synapsejune/warehouse/yourtablename/"
+					},
+					{
+						"name": "Destination",
+						"value": ".Azure Data Lake Storage Gen2 file"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "ParquetSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": false,
+							"wildcardFileName": "*",
+							"enablePartitionDiscovery": false
+						}
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": true,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": true
+						},
+						"tableOption": "autoCreate"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "dataType",
+									"type": "String"
+								},
+								"sink": {
+									"name": "dataType",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "dataSubtype",
+									"type": "String"
+								},
+								"sink": {
+									"name": "dataSubtype",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "dateTime",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "dateTime",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "category",
+									"type": "String"
+								},
+								"sink": {
+									"name": "category",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "subcategory",
+									"type": "String"
+								},
+								"sink": {
+									"name": "subcategory",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "status",
+									"type": "String"
+								},
+								"sink": {
+									"name": "status",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "address",
+									"type": "String"
+								},
+								"sink": {
+									"name": "address",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "latitude",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "latitude",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"name": "longitude",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "longitude",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"name": "source",
+									"type": "String"
+								},
+								"sink": {
+									"name": "source",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "extendedProperties",
+									"type": "String"
+								},
+								"sink": {
+									"name": "extendedProperties",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_498",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_498",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
