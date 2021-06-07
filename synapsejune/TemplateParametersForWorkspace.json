@@ -5,10 +5,22 @@
 		"workspaceName": {
 			"value": "synapsejune"
 		},
+		"AzureSynapseAnalytics1_connectionString": {
+			"value": ""
+		},
+		"Linked_service1_accountKey": {
+			"value": ""
+		},
 		"synapsejune-WorkspaceDefaultSqlServer_connectionString": {
 			"value": ""
 		},
+		"Linked_service1_properties_typeProperties_url": {
+			"value": "https://lakesynapse2.dfs.core.windows.net"
+		},
 		"bing-covid-19-data_sasUri": {
+			"value": ""
+		},
+		"city_safety_boston_sasUri": {
 			"value": ""
 		},
 		"synapsejune-WorkspaceDefaultStorage_properties_typeProperties_url": {
