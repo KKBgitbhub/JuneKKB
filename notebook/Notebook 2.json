@@ -3,11 +3,15 @@
 	"properties": {
 		"nbformat": 4,
 		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "createdspark",
+			"type": "BigDataPoolReference"
+		},
 		"sessionProperties": {
-			"driverMemory": "28g",
-			"driverCores": 4,
-			"executorMemory": "28g",
-			"executorCores": 4,
+			"driverMemory": "56g",
+			"driverCores": 8,
+			"executorMemory": "56g",
+			"executorCores": 8,
 			"numExecutors": 2,
 			"conf": {
 				"spark.dynamicAllocation.enabled": "false",
@@ -18,26 +22,697 @@
 		"metadata": {
 			"saveOutput": true,
 			"synapse_widget": {
-				"version": "0.1"
+				"version": "0.1",
+				"state": {
+					"09ea238c-a52c-486f-97e6-74c1e4265721": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"PCON_NAME": "Rutland and Melton",
+										"TOWN": "Market Harborough",
+										"ESTAB": "2016",
+										"TELNUM": "1536605146",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "15%",
+										"ADDRESS1": "Great Easton Road",
+										"LEA": "855",
+										"READPROG": "2.6",
+										"ICLOSE": "0",
+										"URN": "141279",
+										"MATPROG": "2",
+										"NFTYPE": "ACC",
+										"TFSM6CLA1A": "4",
+										"PCON_CODE": "E14000909",
+										"SCHNAME": "Bringhurst Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "2.3",
+										"ALPHAIND": "7568",
+										"PCODE": "LE16 8RH",
+										"ADDRESS2": "Bringhurst"
+									},
+									{
+										"PCON_NAME": "Rutland and Melton",
+										"TOWN": "Grantham",
+										"ESTAB": "2017",
+										"TELNUM": "1476860315",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "12%",
+										"ADDRESS1": "School Lane",
+										"LEA": "855",
+										"READPROG": "2.4",
+										"ICLOSE": "0",
+										"URN": "119910",
+										"MATPROG": "-1",
+										"NFTYPE": "CY",
+										"TFSM6CLA1A": "2",
+										"PCON_CODE": "E14000909",
+										"SCHNAME": "Buckminster Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "3.8",
+										"ALPHAIND": "8498",
+										"PCODE": "NG33 5RZ",
+										"ADDRESS2": "Buckminster"
+									},
+									{
+										"PCON_NAME": "Rutland and Melton",
+										"TOWN": "Melton Mowbray",
+										"ESTAB": "2018",
+										"TELNUM": "1664562750",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "14%",
+										"ADDRESS1": "Top End",
+										"LEA": "855",
+										"READPROG": "0.9",
+										"ICLOSE": "0",
+										"URN": "139342",
+										"MATPROG": "0.7",
+										"NFTYPE": "ACC",
+										"TFSM6CLA1A": "3",
+										"PCON_CODE": "E14000909",
+										"SCHNAME": "Great Dalby School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "0.4",
+										"ALPHAIND": "21680",
+										"PCODE": "LE14 2HA",
+										"ADDRESS2": "Great Dalby"
+									},
+									{
+										"PCON_NAME": "Loughborough",
+										"TOWN": "Loughborough",
+										"ESTAB": "2019",
+										"TELNUM": "1509880298",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "12%",
+										"ADDRESS1": "Barrow Road",
+										"LEA": "855",
+										"READPROG": "3.4",
+										"ICLOSE": "0",
+										"URN": "119912",
+										"MATPROG": "4.1",
+										"NFTYPE": "CY",
+										"TFSM6CLA1A": "3",
+										"PCON_CODE": "E14000797",
+										"SCHNAME": "Burton-on-the-Wolds Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "2.5",
+										"ALPHAIND": "8898",
+										"PCODE": "LE12 5TB",
+										"ADDRESS2": "Burton-on-the-Wolds"
+									},
+									{
+										"PCON_NAME": "North West Leicestershire",
+										"TOWN": "Coalville",
+										"ESTAB": "2020",
+										"TELNUM": "1530832595",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "26%",
+										"ADDRESS1": "Scotlands Road",
+										"LEA": "855",
+										"READPROG": "-4.2",
+										"ICLOSE": "0",
+										"URN": "119913",
+										"MATPROG": "-3",
+										"NFTYPE": "CY",
+										"TFSM6CLA1A": "11",
+										"PCON_CODE": "E14000858",
+										"SCHNAME": "Belvoirdale Community Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "-1.4",
+										"ALPHAIND": "4766",
+										"PCODE": "LE67 3RD"
+									},
+									{
+										"PCON_NAME": "Charnwood",
+										"TOWN": "Loughborough",
+										"ESTAB": "2021",
+										"TELNUM": "1162302800",
+										"RELDENOM": "Church of England",
+										"PTFSM6CLA1A": "18%",
+										"ADDRESS1": "8 Rothley Road",
+										"LEA": "855",
+										"READPROG": "0.4",
+										"ICLOSE": "0",
+										"URN": "141222",
+										"MATPROG": "1.4",
+										"NFTYPE": "AC",
+										"TFSM6CLA1A": "12",
+										"PCON_CODE": "E14000625",
+										"SCHNAME": "Christ Church & Saint Peter's Cofe Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "2.8",
+										"ALPHAIND": "11560",
+										"PCODE": "LE12 7JU",
+										"ADDRESS2": "Mountsorrel"
+									},
+									{
+										"PCON_NAME": "North West Leicestershire",
+										"TOWN": "Coalville",
+										"ESTAB": "2023",
+										"TELNUM": "1530260301",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "10%",
+										"ADDRESS1": "Whitehill Road",
+										"LEA": "855",
+										"READPROG": "-2.4",
+										"ICLOSE": "0",
+										"URN": "119914",
+										"MATPROG": "-1.5",
+										"NFTYPE": "CY",
+										"TFSM6CLA1A": "3",
+										"PCON_CODE": "E14000858",
+										"SCHNAME": "Ellistown Community Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "-0.5",
+										"ALPHAIND": "17524",
+										"PCODE": "LE67 1EN",
+										"ADDRESS2": "Ellistown"
+									},
+									{
+										"PCON_NAME": "North West Leicestershire",
+										"TOWN": "Coalville",
+										"ESTAB": "2024",
+										"TELNUM": "1530832721",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "23%",
+										"ADDRESS1": "Ashburton Road",
+										"LEA": "855",
+										"READPROG": "-1.1",
+										"ICLOSE": "0",
+										"URN": "119915",
+										"MATPROG": "-0.3",
+										"NFTYPE": "CY",
+										"TFSM6CLA1A": "13",
+										"PCON_CODE": "E14000858",
+										"SCHNAME": "Hugglescote Community Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "1.1",
+										"ALPHAIND": "27142",
+										"PCODE": "LE67 2HA",
+										"ADDRESS2": "Hugglescote"
+									},
+									{
+										"PCON_NAME": "North West Leicestershire",
+										"TOWN": "Coalville",
+										"ESTAB": "2025",
+										"TELNUM": "1530519473",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "19%",
+										"ADDRESS1": "Heather Lane",
+										"LEA": "855",
+										"READPROG": "1.3",
+										"ICLOSE": "0",
+										"URN": "119916",
+										"MATPROG": "0.8",
+										"NFTYPE": "CY",
+										"TFSM6CLA1A": "6",
+										"PCON_CODE": "E14000858",
+										"SCHNAME": "Woodstone Community Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "-0.2",
+										"ALPHAIND": "66152",
+										"PCODE": "LE67 2AH",
+										"ADDRESS2": "Ravenstone"
+									},
+									{
+										"PCON_NAME": "North West Leicestershire",
+										"TOWN": "Coalville",
+										"ESTAB": "2026",
+										"TELNUM": "1530832656",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "7%",
+										"ADDRESS1": "Church Lane",
+										"LEA": "855",
+										"READPROG": "-1",
+										"ICLOSE": "0",
+										"URN": "119917",
+										"MATPROG": "-1.4",
+										"NFTYPE": "CY",
+										"TFSM6CLA1A": "2",
+										"PCON_CODE": "E14000858",
+										"SCHNAME": "New Swannington Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "0.4",
+										"ALPHAIND": "37340",
+										"PCODE": "LE67 5DQ",
+										"ADDRESS2": "Whitwick"
+									}
+								],
+								"schema": {
+									"RECTYPE": "string",
+									"ALPHAIND": "string",
+									"LEA": "string",
+									"ESTAB": "string",
+									"URN": "string",
+									"SCHNAME": "string",
+									"ADDRESS1": "string",
+									"ADDRESS2": "string",
+									"ADDRESS3": "string",
+									"TOWN": "string",
+									"PCODE": "string",
+									"TELNUM": "string",
+									"PCON_CODE": "string",
+									"PCON_NAME": "string",
+									"URN_AC": "string",
+									"SCHNAME_AC": "string",
+									"OPEN_AC": "string",
+									"NFTYPE": "string",
+									"ICLOSE": "string",
+									"RELDENOM": "string",
+									"READPROG": "string",
+									"WRITPROG": "string",
+									"MATPROG": "string",
+									"TFSM6CLA1A": "string",
+									"PTFSM6CLA1A": "string"
+								}
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "count",
+									"categoryFieldKeys": [
+										"RECTYPE"
+									],
+									"seriesFieldKeys": [
+										"RECTYPE"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"2b757710-93fe-4e1c-a147-a82fc9b28832": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"PCON_NAME": "Rutland and Melton",
+										"TOWN": "Market Harborough",
+										"ESTAB": "2016",
+										"TELNUM": "1536605146",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "15%",
+										"ADDRESS1": "Great Easton Road",
+										"LEA": "855",
+										"READPROG": "2.6",
+										"ICLOSE": "0",
+										"URN": "141279",
+										"MATPROG": "2",
+										"NFTYPE": "ACC",
+										"TFSM6CLA1A": "4",
+										"PCON_CODE": "E14000909",
+										"SCHNAME": "Bringhurst Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "2.3",
+										"ALPHAIND": "7568",
+										"PCODE": "LE16 8RH",
+										"ADDRESS2": "Bringhurst"
+									},
+									{
+										"PCON_NAME": "Rutland and Melton",
+										"TOWN": "Grantham",
+										"ESTAB": "2017",
+										"TELNUM": "1476860315",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "12%",
+										"ADDRESS1": "School Lane",
+										"LEA": "855",
+										"READPROG": "2.4",
+										"ICLOSE": "0",
+										"URN": "119910",
+										"MATPROG": "-1",
+										"NFTYPE": "CY",
+										"TFSM6CLA1A": "2",
+										"PCON_CODE": "E14000909",
+										"SCHNAME": "Buckminster Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "3.8",
+										"ALPHAIND": "8498",
+										"PCODE": "NG33 5RZ",
+										"ADDRESS2": "Buckminster"
+									},
+									{
+										"PCON_NAME": "Rutland and Melton",
+										"TOWN": "Melton Mowbray",
+										"ESTAB": "2018",
+										"TELNUM": "1664562750",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "14%",
+										"ADDRESS1": "Top End",
+										"LEA": "855",
+										"READPROG": "0.9",
+										"ICLOSE": "0",
+										"URN": "139342",
+										"MATPROG": "0.7",
+										"NFTYPE": "ACC",
+										"TFSM6CLA1A": "3",
+										"PCON_CODE": "E14000909",
+										"SCHNAME": "Great Dalby School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "0.4",
+										"ALPHAIND": "21680",
+										"PCODE": "LE14 2HA",
+										"ADDRESS2": "Great Dalby"
+									},
+									{
+										"PCON_NAME": "Loughborough",
+										"TOWN": "Loughborough",
+										"ESTAB": "2019",
+										"TELNUM": "1509880298",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "12%",
+										"ADDRESS1": "Barrow Road",
+										"LEA": "855",
+										"READPROG": "3.4",
+										"ICLOSE": "0",
+										"URN": "119912",
+										"MATPROG": "4.1",
+										"NFTYPE": "CY",
+										"TFSM6CLA1A": "3",
+										"PCON_CODE": "E14000797",
+										"SCHNAME": "Burton-on-the-Wolds Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "2.5",
+										"ALPHAIND": "8898",
+										"PCODE": "LE12 5TB",
+										"ADDRESS2": "Burton-on-the-Wolds"
+									},
+									{
+										"PCON_NAME": "North West Leicestershire",
+										"TOWN": "Coalville",
+										"ESTAB": "2020",
+										"TELNUM": "1530832595",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "26%",
+										"ADDRESS1": "Scotlands Road",
+										"LEA": "855",
+										"READPROG": "-4.2",
+										"ICLOSE": "0",
+										"URN": "119913",
+										"MATPROG": "-3",
+										"NFTYPE": "CY",
+										"TFSM6CLA1A": "11",
+										"PCON_CODE": "E14000858",
+										"SCHNAME": "Belvoirdale Community Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "-1.4",
+										"ALPHAIND": "4766",
+										"PCODE": "LE67 3RD"
+									},
+									{
+										"PCON_NAME": "Charnwood",
+										"TOWN": "Loughborough",
+										"ESTAB": "2021",
+										"TELNUM": "1162302800",
+										"RELDENOM": "Church of England",
+										"PTFSM6CLA1A": "18%",
+										"ADDRESS1": "8 Rothley Road",
+										"LEA": "855",
+										"READPROG": "0.4",
+										"ICLOSE": "0",
+										"URN": "141222",
+										"MATPROG": "1.4",
+										"NFTYPE": "AC",
+										"TFSM6CLA1A": "12",
+										"PCON_CODE": "E14000625",
+										"SCHNAME": "Christ Church & Saint Peter's Cofe Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "2.8",
+										"ALPHAIND": "11560",
+										"PCODE": "LE12 7JU",
+										"ADDRESS2": "Mountsorrel"
+									},
+									{
+										"PCON_NAME": "North West Leicestershire",
+										"TOWN": "Coalville",
+										"ESTAB": "2023",
+										"TELNUM": "1530260301",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "10%",
+										"ADDRESS1": "Whitehill Road",
+										"LEA": "855",
+										"READPROG": "-2.4",
+										"ICLOSE": "0",
+										"URN": "119914",
+										"MATPROG": "-1.5",
+										"NFTYPE": "CY",
+										"TFSM6CLA1A": "3",
+										"PCON_CODE": "E14000858",
+										"SCHNAME": "Ellistown Community Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "-0.5",
+										"ALPHAIND": "17524",
+										"PCODE": "LE67 1EN",
+										"ADDRESS2": "Ellistown"
+									},
+									{
+										"PCON_NAME": "North West Leicestershire",
+										"TOWN": "Coalville",
+										"ESTAB": "2024",
+										"TELNUM": "1530832721",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "23%",
+										"ADDRESS1": "Ashburton Road",
+										"LEA": "855",
+										"READPROG": "-1.1",
+										"ICLOSE": "0",
+										"URN": "119915",
+										"MATPROG": "-0.3",
+										"NFTYPE": "CY",
+										"TFSM6CLA1A": "13",
+										"PCON_CODE": "E14000858",
+										"SCHNAME": "Hugglescote Community Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "1.1",
+										"ALPHAIND": "27142",
+										"PCODE": "LE67 2HA",
+										"ADDRESS2": "Hugglescote"
+									},
+									{
+										"PCON_NAME": "North West Leicestershire",
+										"TOWN": "Coalville",
+										"ESTAB": "2025",
+										"TELNUM": "1530519473",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "19%",
+										"ADDRESS1": "Heather Lane",
+										"LEA": "855",
+										"READPROG": "1.3",
+										"ICLOSE": "0",
+										"URN": "119916",
+										"MATPROG": "0.8",
+										"NFTYPE": "CY",
+										"TFSM6CLA1A": "6",
+										"PCON_CODE": "E14000858",
+										"SCHNAME": "Woodstone Community Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "-0.2",
+										"ALPHAIND": "66152",
+										"PCODE": "LE67 2AH",
+										"ADDRESS2": "Ravenstone"
+									},
+									{
+										"PCON_NAME": "North West Leicestershire",
+										"TOWN": "Coalville",
+										"ESTAB": "2026",
+										"TELNUM": "1530832656",
+										"RELDENOM": "Does not apply",
+										"PTFSM6CLA1A": "7%",
+										"ADDRESS1": "Church Lane",
+										"LEA": "855",
+										"READPROG": "-1",
+										"ICLOSE": "0",
+										"URN": "119917",
+										"MATPROG": "-1.4",
+										"NFTYPE": "CY",
+										"TFSM6CLA1A": "2",
+										"PCON_CODE": "E14000858",
+										"SCHNAME": "New Swannington Primary School",
+										"URN_AC": "0",
+										"RECTYPE": "1",
+										"WRITPROG": "0.4",
+										"ALPHAIND": "37340",
+										"PCODE": "LE67 5DQ",
+										"ADDRESS2": "Whitwick"
+									}
+								],
+								"schema": {
+									"RECTYPE": "string",
+									"ALPHAIND": "string",
+									"LEA": "string",
+									"ESTAB": "string",
+									"URN": "string",
+									"SCHNAME": "string",
+									"ADDRESS1": "string",
+									"ADDRESS2": "string",
+									"ADDRESS3": "string",
+									"TOWN": "string",
+									"PCODE": "string",
+									"TELNUM": "string",
+									"PCON_CODE": "string",
+									"PCON_NAME": "string",
+									"URN_AC": "string",
+									"SCHNAME_AC": "string",
+									"OPEN_AC": "string",
+									"NFTYPE": "string",
+									"ICLOSE": "string",
+									"RELDENOM": "string",
+									"READPROG": "string",
+									"WRITPROG": "string",
+									"MATPROG": "string",
+									"TFSM6CLA1A": "string",
+									"PTFSM6CLA1A": "string"
+								}
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "count",
+									"categoryFieldKeys": [
+										"RECTYPE"
+									],
+									"seriesFieldKeys": [
+										"RECTYPE"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					}
+				}
 			},
 			"kernelspec": {
 				"name": "synapse_pyspark",
-				"display_name": "python"
+				"display_name": "Synapse PySpark"
 			},
 			"language_info": {
 				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/b227cc88-91a1-465e-aac9-dd86743b6c80/resourceGroups/synapseKKBsub/providers/Microsoft.Synapse/workspaces/synapsejune/bigDataPools/createdspark",
+				"name": "createdspark",
+				"type": "Spark",
+				"endpoint": "https://synapsejune.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/createdspark",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "2.4",
+				"nodeCount": 10,
+				"cores": 8,
+				"memory": 56,
+				"automaticScaleJobs": false
 			},
 			"sessionKeepAliveTimeout": 30
 		},
 		"cells": [
 			{
 				"cell_type": "code",
+				"metadata": {
+					"microsoft": {
+						"language": "python"
+					},
+					"collapsed": false
+				},
 				"source": [
 					"%%pyspark\r\n",
 					"df = spark.read.load('abfss://housingdata@lakesynapse2.dfs.core.windows.net/check.csv/part-00000-c6b127b4-c677-4451-b48f-0ffb3ac5e3e3-c000.snappy.parquet', format='parquet')\r\n",
 					"display(df.limit(10))"
 				],
-				"execution_count": null
+				"execution_count": 1
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "python"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%pyspark\r\n",
+					"df = spark.read.load('abfss://housingdata@lakesynapse2.dfs.core.windows.net/check.csv/*', format='parquet')\r\n",
+					"display(df.limit(10))"
+				],
+				"execution_count": 2
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"df.count()"
+				],
+				"execution_count": 3
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"df.withColumn(\"first part\", df2['PCODE'].substr(1,4)).show()"
+				],
+				"execution_count": 5
 			}
 		]
 	}
