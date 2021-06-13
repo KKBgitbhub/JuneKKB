@@ -27310,6 +27310,66 @@
 					"display(df2)"
 				],
 				"execution_count": 4
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"df2.createOrReplaceTempView(\"housing_table\")\r\n",
+					"sql_results = spark.sql(\"SELECT * FROM Housing_table where TOWN = 'London' \")\r\n",
+					"sql_results.show()"
+				],
+				"execution_count": 5
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"li=[\"London\",\"Kingston upon Thames\",\"Richmond\"]\r\n",
+					"df2.filter(df2.TOWN.isin(li)).show()"
+				],
+				"execution_count": 6
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": true
+				},
+				"source": [
+					"df2.write.save('check.csv')"
+				],
+				"execution_count": 7
 			}
 		]
 	}
