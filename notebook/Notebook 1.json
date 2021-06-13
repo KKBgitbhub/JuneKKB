@@ -1,0 +1,111 @@
+{
+	"name": "Notebook 1",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "createdspark",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "56g",
+			"driverCores": 8,
+			"executorMemory": "56g",
+			"executorCores": 8,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1"
+			},
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/b227cc88-91a1-465e-aac9-dd86743b6c80/resourceGroups/synapseKKBsub/providers/Microsoft.Synapse/workspaces/synapsejune/bigDataPools/createdspark",
+				"name": "createdspark",
+				"type": "Spark",
+				"endpoint": "https://synapsejune.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/createdspark",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "2.4",
+				"nodeCount": 10,
+				"cores": 8,
+				"memory": 56,
+				"automaticScaleJobs": false
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "python"
+					},
+					"collapsed": true
+				},
+				"source": [
+					"%%pyspark\r\n",
+					"df = spark.read.load('abfss://housingdata@lakesynapse2.dfs.core.windows.net/england_ks2final.csv', format='csv'\r\n",
+					", header=True\r\n",
+					")\r\n",
+					"display(df.limit(10))\r\n",
+					"\r\n",
+					"df.select(\r\n",
+					"\r\n",
+					"\"RECTYPE\",\r\n",
+					"\"ALPHAIND\",\r\n",
+					"\"LEA\",\r\n",
+					"\"ESTAB\",\r\n",
+					"\"URN\",\r\n",
+					"\"SCHNAME\",\r\n",
+					"\"ADDRESS1\",\r\n",
+					"\"ADDRESS2\",\r\n",
+					"\"ADDRESS3\",\r\n",
+					"\"TOWN\",\r\n",
+					"\"PCODE\",\r\n",
+					"\"TELNUM\",\r\n",
+					"\"PCON_CODE\",\r\n",
+					"\"PCON_NAME\",\r\n",
+					"\"URN_AC\",\r\n",
+					"\"SCHNAME_AC\",\r\n",
+					"\"OPEN_AC\",\r\n",
+					"\"NFTYPE\",\r\n",
+					"\"ICLOSE\",\r\n",
+					"\"RELDENOM\",\r\n",
+					"\"READPROG\",\r\n",
+					"\"WRITPROG\",\r\n",
+					"\"MATPROG\",\r\n",
+					"\"TFSM6CLA1A\",\r\n",
+					"\"PTFSM6CLA1A\").show()\r\n",
+					"\r\n",
+					"\r\n",
+					"display(df)"
+				],
+				"execution_count": 15
+			}
+		]
+	}
+}
